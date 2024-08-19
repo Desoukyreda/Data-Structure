@@ -8,7 +8,7 @@ stackentry arr[MAX_SIZE];
 int top;
 }Stack;
 
-void init(Stack &ptr);
+void init(Stack *ptr);
 void push(stackentry e,Stack* ptr);
 void pop(stackentry *pe , Stack *ptr);
 int isempty (Stack *ptr);

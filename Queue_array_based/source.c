@@ -8,20 +8,20 @@ int init(Queue *ptr)
 }
 void enqueue(queueentry e,Queue* ptr)
 {
-    rear = (rear+1)%MAX_SIZE;
-    ptr->element[rear] = e;
+    ptr->rear = (ptr->rear+1)%MAX_SIZE;
+    ptr->element[ptr->rear] = e;
     ptr->size++;
 }
 
 void dequeue(queueentry * pe,Queue *ptr)
 {
-    *pe = ptr->element[front];
-    front = (front+1)%MAX_SIZE;
+    *pe = ptr->element[ptr->front];
+    ptr->front = (ptr->front+1)%MAX_SIZE;
     ptr->size--;
 }
 int isempty(Queue *ptr)
 {
-    return !size;
+    return !ptr->size;
 }
 
 int isfull(Queue *ptr)

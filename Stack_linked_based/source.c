@@ -1,6 +1,6 @@
 #include"header.h"
 #include<stdlib.h>
-void init(Stack &ptr)
+void init(Stack *ptr)
 {
     ptr->top = NULL;
     ptr->size = 0;
@@ -9,7 +9,7 @@ void init(Stack &ptr)
 void push(stackentry e,Stack* ptr)
 {
     struct stack *p = ptr->top;
-    ptr->top = (struct stack) malloc(sizeof(struct stack));
+    ptr->top = (struct stack *) malloc(sizeof(struct stack));
     ptr->top->element = e;
     ptr->top->node = p ;
     ptr->size++;

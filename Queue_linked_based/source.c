@@ -9,14 +9,14 @@ void init(Queue *ptr)
 
 void enqueue(queueentry e, Queue *ptr)
 {
- struct queue * pn = (struct queue)malloc(sizeof(struct queue));
+ struct queue * pn = (struct queue* )malloc(sizeof(struct queue));
   pn->element = e;
   pn->node = NULL;
   if(ptr->front == NULL)
   {
       ptr->front = pn;
   }
-  if(ptr->raer != NULL)
+  if(ptr->rear != NULL)
   {
   ptr->rear->node = pn;
   }

@@ -12,7 +12,7 @@ typedef struct s
   struct stack* top;
   int size;
 }Stack;
-void init(Stack &ptr);
+void init(Stack *ptr);
 void push(stackentry e,Stack* ptr);
 void pop(stackentry *pe , Stack *ptr);
 int isempty (Stack *ptr);
